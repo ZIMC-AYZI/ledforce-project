@@ -1,0 +1,82 @@
+.wrapper-slider{
+    display: flex;
+}
+.images-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+}
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Hide the images by default */
+.mySlides1,
+.mySlides2,
+.mySlides3,
+.mySlides4 {
+    margin: 0 auto;
+    display: none;
+    width: 96%;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* Six columns side by side */
+.column {
+    width: 16.66%;
+    margin: 10px;
+    & img{
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
+    }
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo1, .demo2, .demo3, .demo4 {
+    opacity: 0.6;
+}
+
+.active,
+.demo1, .demo2, .demo3, .demo4{
+    &:hover{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,152 @@
+#modal_program1,
+#modal_program2,
+#modal_program3,
+#modal_program4
+{
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    z-index: 9999; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    top: 5%;/* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: calc(50% - 700px); /* пoлoвинa экрaнa слевa */
+    /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+
+    width: 1400px;
+    /* Рaзмеры дoлжны быть фиксирoвaны */
+
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+}
+.modal_program
+{
+    display: flex;
+    & .container
+    {
+        position: relative;
+
+        width: 85%;
+    }
+    & .modal_close
+    {
+        z-index: 10000;
+        right: 0%;
+
+        cursor: pointer;
+    }
+
+    & .content-block
+    {
+        font-family: 'Montserrat', sans-serif;
+
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 40%;
+        margin: 0;
+        padding: 0;
+
+        align-items: start;
+        &__title
+        {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 500;
+
+            letter-spacing: 1px;
+
+            color: #fff;
+        }
+        &__price
+        {
+            font-size: 28px;
+            font-weight: 400;
+
+            margin-top: 20px;
+
+            letter-spacing: 1px;
+
+            color: #fff;
+        }
+        & .btn
+        {
+            font-size: 24px;
+            font-weight: 700;
+
+            margin-top: 20px;
+            padding: 16px 40px;
+
+            cursor: pointer;
+
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background-color: #7c001f;
+            &:hover
+            {
+                background-color: #b90022;
+            }
+        }
+        & .text
+        {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2;
+
+            margin-top: 20px;
+
+            letter-spacing: 1.5px;
+
+            color: #fff;
+        }
+        & .postext
+        {
+            font-size: 16px;
+            line-height: 2;
+
+            margin-top: 20px;
+
+            letter-spacing: 1.5px;
+
+            color: #fff;
+        }
+        & ul
+        {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2;
+
+            margin: 0;
+            padding: 0;
+
+            letter-spacing: 1.5px;
+
+            color: #fff;
+        }
+        /*ПРАВКА*/
+        & p
+        {
+            font-size: 16px;
+            line-height: 1.2;
+
+            color: #fff;
+        }
+        /*ПРАВКА*/
+    }
+}
+.modal_close-program
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 21px;
+    height: 21px;
+
+    cursor: pointer;
+    z-index: 10000;
+    color: white;
+}
